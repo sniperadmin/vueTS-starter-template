@@ -2,16 +2,16 @@ import Vue from 'vue'
 import Vuetify from 'vuetify'
 import { store } from '@/store'
 import { shallowMount } from '@vue/test-utils';
-import HelloWorld from '@/components/HelloWorld.vue';
+import About from '@/views/About.vue';
 
 Vue.use(Vuetify)
 const vuetify = new Vuetify({})
 
-describe('HelloWorld.vue', () => {
+describe('About.vue', () => {
   let wrapper: any
 
   beforeEach(() => {
-    wrapper = shallowMount(HelloWorld, {
+    wrapper = shallowMount(About, {
       store,
       vuetify,
     })
@@ -21,8 +21,9 @@ describe('HelloWorld.vue', () => {
     wrapper.destroy()
   })
 
-  it('should be vue', () => {
-    expect(wrapper.isVueInstance()).toBe(true)
+  it('should load title', () => {
+    const title: any = wrapper.find('.about')
+    expect(title.text()).toBe('This is an about page')
   })
+})
 
-});
