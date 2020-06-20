@@ -1,4 +1,8 @@
-# queue-management
+# Vue TS Starter Template
+
+# Tested and checked by
+![CI-Jest](https://github.com/sniperadmin/vueTS-starter-template/workflows/CI-Jest/badge.svg)
+![Coverage-Monitor](https://github.com/sniperadmin/vueTS-starter-template/workflows/Coverage-Monitor/badge.svg)
 
 ## Project setup
 ```
