@@ -1,13 +1,11 @@
-name: Check License Lines
-on:
-  push:
-    branches: [master]
-  pull_request:
-    branches: [ master ]
+name: REUSE Compliance Check
+
+on: [push, pull_request]
+
 jobs:
-  check-license-lines:
+  test:
     runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - name: Check License Lines
-      uses: kt3k/license_checker@v1.0.1
+    steps: 
+    - uses: actions/checkout@v2
+    - name: REUSE Compliance Check
+      uses: fsfe/reuse-action@v1
