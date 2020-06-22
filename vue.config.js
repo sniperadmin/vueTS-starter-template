@@ -7,6 +7,6 @@ module.exports = {
   chainWebpack(config) {
     config.plugin('BundleAnalyzerPlugin')
       .use(BundleAnalyzerPlugin)
-      .init(Plugin => new Plugin({ token: process.env.BUNDLE_ANALYZER_TOKEN }))
+      .init(Plugin => new Plugin({ token: 'a576f29fffe7ff995f90fd98b47e0dad48760bcb' }))
   }
 }
