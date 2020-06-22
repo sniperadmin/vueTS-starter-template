@@ -17,4 +17,4 @@ jobs:
     - name: NPM
       run: |
         npm i
-        npm run build
+        npm run build-report
